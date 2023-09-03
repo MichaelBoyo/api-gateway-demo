@@ -1,24 +1,24 @@
 package org.example.auth.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.auth.service.AuthService;
+import org.example.auth.service.TheatreService;
 import org.example.clients.movies.MovieRequest;
 import org.example.clients.movies.MovieResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/auth")
+@RequestMapping("api/theatre")
 @RequiredArgsConstructor
-public class AuthController {
-    private final AuthService authService;
+public class TheatreController {
+    private final TheatreService theatreService;
 
     @GetMapping
     public String hello() {
-        return "Hello form Auth";
+        return "Hello form Theatre Service";
     }
 
     @PostMapping
     public MovieResponse addMovie(@RequestBody MovieRequest movieRequest) {
-        return authService.addMovie(movieRequest);
+        return theatreService.addMovie(movieRequest);
     }
 }

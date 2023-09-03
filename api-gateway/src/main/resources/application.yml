@@ -6,10 +6,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: auth
-          uri: lb://AUTH
+        - id: theatre
+          uri: lb://THEATRE
           predicates:
-            - Path=/api/auth/**
+            - Path=/api/theatre/**
 
         - id: movies
           uri: lb://MOVIES

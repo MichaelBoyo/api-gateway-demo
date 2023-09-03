@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class AuthService {
+public class TheatreService {
     private final MovieClient movieClient;
     public MovieResponse addMovie(MovieRequest movieRequest) {
         return movieClient.createLaundryOrder(movieRequest);

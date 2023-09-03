@@ -16,7 +16,7 @@
     <description>server</description>
     <modules>
         <module>api-gateway</module>
-        <module>auth</module>
+        <module>theater</module>
         <module>eureka-server</module>
         <module>clients</module>
         <module>movies</module>

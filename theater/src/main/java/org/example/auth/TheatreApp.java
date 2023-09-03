@@ -6,8 +6,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication(scanBasePackages = {"org.example.**"})
 @EnableFeignClients(basePackages = "org.example.**")
-public class AuthApplication {
+public class TheatreApp {
     public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class, args);
+        SpringApplication.run(TheatreApp.class, args);
     }
 }
