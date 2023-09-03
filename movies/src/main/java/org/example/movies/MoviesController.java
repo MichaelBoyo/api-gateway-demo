@@ -4,13 +4,28 @@ import org.example.clients.movies.MovieRequest;
 import org.example.clients.movies.MovieResponse;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/movies")
 public class MoviesController {
 
+    List<String> movies = List.of(
+            "The Shawshank Redemption",
+            "Inception",
+            "Pulp Fiction",
+            "The Dark Knight",
+            "Forrest Gump",
+            "The Matrix",
+            "The Godfather",
+            "Jurassic Park",
+            "Titanic",
+            "The Lord of the Rings: The Fellowship of the Ring"
+        );
+
     @GetMapping
-    public String hello() {
-        return "YO!! from Movies";
+    public List<String> movies() {
+        return movies;
     }
 
     @PostMapping
